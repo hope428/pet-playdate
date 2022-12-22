@@ -1,0 +1,50 @@
+[
+    {
+        "pet_name": "Bernard",
+        "pet_age": "2",
+        "species": "dog",
+        "gender": "male",
+        "activity_level": "2",
+        "fixed": "yes"
+    },
+    {
+        "pet_name": "Godzilla",
+        "pet_age": "8",
+        "species": "lizard",
+        "gender": "male",
+        "activity_level": "4",
+        "fixed": "no"
+    },
+    {
+        "pet_name": "Sammie G Willikers",
+        "pet_age": "1",
+        "species": "Cat",
+        "gender": "female",
+        "activity_level": "1",
+        "fixed": "no"
+    },
+    {
+        "pet_name": "Seamus",
+        "pet_age": "6",
+        "species": "dog",
+        "gender": "male",
+        "activity_level": "5",
+        "fixed": "yes"
+    },
+    {
+        "pet_name": "Gertrude",
+        "pet_age": "12",
+        "species": "bird",
+        "gender": "female",
+        "activity_level": "3.5",
+        "fixed": "no"
+    }, 
+    {
+         "pet_name": "Sheldon",
+        "pet_age": "3",
+        "species": "dog",
+        "gender": "male",
+        "activity_level": "5",
+        "fixed": "yes"
+    }
+]

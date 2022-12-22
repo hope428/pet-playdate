@@ -27,9 +27,12 @@ Pets.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    // Drop-down menu? If so, how would we register it here?
+    // Scale 1-5 (1 not at all active (no bones day) to 5 extremely active (bones day).
     activity_level: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
+      allowDecimals: true,
     },
     fixed: {
       type: DataTypes.BOOLEAN,
