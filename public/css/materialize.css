@@ -1,0 +1,15 @@
+nav .brand-logo {
+    margin-left: 1%;
+}
+.cards-test {
+    display: flex;
+}
+div .card-action {
+    text-align: center;
+}
+.hero-image {
+    background-image: url("../images/pawprint.jpg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: cover;
+}
