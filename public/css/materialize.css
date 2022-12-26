@@ -1,15 +1,24 @@
-nav .brand-logo {
+/* NAV BAR */
+.nav-wrapper, .material-icons , nav a {
+    background-color: #1785b6;
+    color: #f8d152;
+}
+.brand-logo {
     margin-left: 1%;
 }
+/* CARDS */
 .cards-test {
     display: flex;
+    margin: 0%;
+    padding: 0;
 }
-div .card-action {
+.card-action {
     text-align: center;
 }
+/* HERO IMAGE */
 .hero-image {
     background-image: url("../images/pawprint.jpg");
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 40vh;
     background-size: cover;
 }
