@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const {User} = require('../../models')
 
 
 //localhost:3001/api/users/login
@@ -17,16 +18,18 @@ router.post('/login', async (req, res) => {
             res.status(404).json("Couldn't log you in")
             return;
         }
-        const validPassword = await user.validatePassword(req.body.password)
+        const validPassword = await user.checkPassword(req.body.password)
         if(!validPassword){
             res.status(404).json("Couldn't log you in, please try again!")
             return;
         }
+        
         req.session.save(() => {
             req.session.loggedIn = true;
             res.status(200).json("Success logging in")
         })
     } catch (error) {
+        console.log(error);
         res.status(500).json(error)
     }
 })
@@ -43,8 +46,10 @@ router.post('/signup', async (req, res) => {
             email: req.body.email,
             password: req.body.password
         })
+        console.log(req.body);
         res.status(200).json(newUser)
     } catch (error) {
+        console.log(error);
         res.status(500).json(error)
     }
 })
