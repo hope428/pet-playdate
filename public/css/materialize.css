@@ -1,4 +1,7 @@
-/* NAV BAR */
+* {
+    font-family: 'Comfortaa', cursive;
+}
+/*Nav Bar*/
 .nav-wrapper, .material-icons , nav a {
     background-color: #1785b6;
     color: #f8d152;
@@ -6,19 +9,25 @@
 .brand-logo {
     margin-left: 1%;
 }
-/* CARDS */
+/*Cards*/
 .cards-test {
     display: flex;
-    margin: 0%;
-    padding: 0;
+    margin-left: 30vh;
+}
+.card {
+    margin: 2rem 0 0;
 }
 .card-action {
     text-align: center;
 }
-/* HERO IMAGE */
+/*Hero Image*/
 .hero-image {
     background-image: url("../images/pawprint.jpg");
     background-repeat: no-repeat;
     height: 40vh;
     background-size: cover;
 }
+/*Dashboard*/
+/* .dashboard-layout {
+    display: flex;
+} */
