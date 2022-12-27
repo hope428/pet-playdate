@@ -19,6 +19,7 @@ Pet.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    // Drop-down menu? Options: Dog, Cat, Bird, Lizard.
     species: {
       type: DataTypes.STRING,
       allowNull: false,
