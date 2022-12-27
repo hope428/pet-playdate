@@ -5,7 +5,7 @@
         "species": "dog",
         "gender": "male",
         "activity_level": "2",
-        "fixed": "yes"
+        "fixed": true
     },
     {
         "pet_name": "Godzilla",
@@ -13,7 +13,7 @@
         "species": "lizard",
         "gender": "male",
         "activity_level": "4",
-        "fixed": "no"
+        "fixed": false
     },
     {
         "pet_name": "Sammie G Willikers",
@@ -21,7 +21,7 @@
         "species": "Cat",
         "gender": "female",
         "activity_level": "1",
-        "fixed": "no"
+        "fixed": false
     },
     {
         "pet_name": "Seamus",
@@ -29,7 +29,7 @@
         "species": "dog",
         "gender": "male",
         "activity_level": "5",
-        "fixed": "yes"
+        "fixed": true
     },
     {
         "pet_name": "Gertrude",
@@ -37,7 +37,7 @@
         "species": "bird",
         "gender": "female",
         "activity_level": "3",
-        "fixed": "no"
+        "fixed": false
     }, 
     {
          "pet_name": "Sheldon",
@@ -45,6 +45,6 @@
         "species": "dog",
         "gender": "male",
         "activity_level": "5",
-        "fixed": "yes"
+        "fixed": true
     }
 ]
