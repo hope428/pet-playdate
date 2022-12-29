@@ -9,6 +9,7 @@ const createNewDate = () => {
     headers: { "Content-Type": "application/json" },
     body: {
     //   location: zip code goes here,
+    // pet_id: current pet id will go here,
       date: dateField.value,
     },
   }).then((res) => {
@@ -24,6 +25,3 @@ const createNewDate = () => {
 };
 
 //button add event listener, calls createNewDate
-dateField.addEventListener('click', ()=>{
-    console.log(dateField.value);
-})
