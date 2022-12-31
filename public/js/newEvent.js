@@ -16,14 +16,15 @@ const createNewDate = () => {
   }).then((res) => {
     if(!res.ok){
         //this should create alert on page if form didn't submit
-        alert = '<span>Something went wrong. Could not submit form</span><button class="btn-flat toast-action">X</button>'
+        alert = '<span>Something went wrong. Could not submit form</span>'
         M.toast({html: alert});
         dateField.value = ""
         //TODO: clear zipcode selector as well
     } else {
       //this should create alert on page if form submitted successfully
-      alert = '<span>New playdate created!</span><button class="btn-flat toast-action">X</button>'
+      alert = '<span>New playdate created!</span>'
       M.toast({html: alert});
+      //TODO: clear form
     }
   });
 };
