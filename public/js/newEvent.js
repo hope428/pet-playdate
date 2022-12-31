@@ -1,27 +1,31 @@
 const dateField = document.getElementById("new-date");
-// zip code drop down selector
-// button selector 
+let alert;
+// TODO: zip code drop down selector
+// TODO: button selector 
 
 const createNewDate = () => {
   event.preventDefault();
-  fetch("/", {
+  fetch("/new-playdate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: {
-    //   location: zip code goes here,
-    // pet_id: current pet id will go here,
+    // TODO: location: zip code goes here,
+    // TODO: pet_id: current pet id will go here,
       date: dateField.value,
     },
   }).then((res) => {
     if(!res.ok){
-        //maybe create alert on page here?
+        //this should create alert on page if form didn't submit
+        alert = '<span>Something went wrong. Could not submit form</span><button class="btn-flat toast-action">X</button>'
+        M.toast({html: alert});
         dateField.value = ""
-        //clear zipcode selector as well
-        console.log("Something went wrong. Could not submit form");
+        //TODO: clear zipcode selector as well
     } else {
-        console.log("New playdate created!");
+      //this should create alert on page if form submitted successfully
+      alert = '<span>New playdate created!</span><button class="btn-flat toast-action">X</button>'
+      M.toast({html: alert});
     }
   });
 };
 
-//button add event listener, calls createNewDate
+//TODO: button add event listener, calls createNewDate
