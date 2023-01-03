@@ -27,7 +27,7 @@
     height: 40vh;
     background-size: cover;
 }
-/*Dashboard*/
-/* .dashboard-layout {
-    display: flex;
-} */
+/* Form */
+.form-layout, .second-form {
+    margin: 2%;
+}
