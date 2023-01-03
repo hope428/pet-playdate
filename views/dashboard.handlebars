@@ -1,31 +1,12 @@
-<section class="dashboard-layout">
-{{!--Date Picker--}}
-    <div class="row">
-        <div class="col l6">
-          <div class="card">
-            <form>
-                <div class="input-field">
-                    <input type="text" class="datepicker" id="new-date"/>
-                </div>
-                <div class="input-field">
-                  <select id="location-zip">
-                    <option class="disabled selected">Choose a location</option>
-                    <option value="19102">19102</option>
-                    <option value="19103">19103</option>
-                    <option value="19104">19104</option>
-                    <option value="19106">19106</option>
-                    <option value="19107">19107</option>
-                    <option value="19111">19111</option>
-                    <option value="19112">19112</option>
-                    <option value="19114">19114</option>
-                    <option value="19115">19115</option>
-                    <option value="19116">19116</option>
-                  </select>
-                  <label>Playdate Location</label>
-                  </div>
-
-                  <button id="enroll" data-petid="{{id}}">Create Event</button>
-            </form>
+<section class="dashboard-layout container">
+  {{!--Date Picker--}}
+  <div class="row">
+    <div class="col s12 m12 l12">
+      <div class="card">
+        <form>
+          <div class="input-field col s12 m6 l6">
+            <input type="text" class="datepicker" id="new-date"/>
+            <label>Pick a date for your event</label>
           </div>
         </div>
     </div>
@@ -44,20 +25,56 @@
                 </a>
                 {{/each}}
             </ul>
+          <div class="input-field col s12 m3 l3">
+            <select id="location-zip">
+              <option class="disabled selected">Choose a location</option>
+              <option value="19102">19102</option>
+              <option value="19103">19103</option>
+              <option value="19104">19104</option>
+              <option value="19106">19106</option>
+              <option value="19107">19107</option>
+              <option value="19111">19111</option>
+              <option value="19112">19112</option>
+              <option value="19114">19114</option>
+              <option value="19115">19115</option>
+              <option value="19116">19116</option>
+            </select>
+            <label>Playdate Location</label>
           </div>
-        </div>
-
-        <div class="col l6">
-          <h4>Bio</h4>
-          <ul class="collection">
-            <li>{{pet_name}}</li>
-            <li>Age: {{pet_age}}</li>
-            <li>Species: {{species}}</li>
-            <li>Gender: {{gender}}</li>
-            <li>Activity level: {{activity_level}}</li>
-            <li>Fixed: {{#if fixed}} yes {{else}} no {{/if}}</li>
-          </ul>
-        </div>
+          <div class="input-field col s12 m3 l3">
+            <button class="dashboard-button"id="enroll" data-petid="{{id}}">Create Event</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+  {{!--List for upcoming events--}}
+  <div class="row">
+    <div class="col s12 m6 l6">
+        <h4>Upcoming Events</h4>
+        <ul class="collection">
+          {{#each pet_playdates as |event|}}
+          <li>
+            <span class="event-location">Location: {{event.location}}</span>
+            <span class="event-date">Date: {{format_date event.date}}</span>
+            {{!-- Can add other attending pets here --}}
+          </li>
+          {{/each}}
+        </ul>
+    </div>
+
+  <div class="col s12 m6 l6">
+      <h4>Bio</h4>
+      <ul class="collection">
+        <li>{{pet_name}}</li>
+        <li>Age: {{pet_age}}</li>
+        <li>Species: {{species}}</li>
+        <li>Gender: {{gender}}</li>
+        <li>Activity level: {{activity_level}}</li>
+        <li>Fixed: {{#if fixed}} yes {{else}} no {{/if}}</li>
+      </ul>
+    </div>
+  </div>
+  </div>
 </section>
 <script src="/js/newEvent.js"></script>
