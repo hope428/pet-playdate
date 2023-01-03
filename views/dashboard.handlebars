@@ -30,10 +30,10 @@
         </div>
     </div>
 {{!--List for upcoming events--}}
-    <p>{{pet_name}}'s Events</p>
     <div class="row">
         <div class="col l6">
           <div class="card">
+            <h4>Upcoming Events</h4>
             <ul class="collection">
                 {{#each pet_playdates as |event|}}
                 <li>
@@ -44,6 +44,18 @@
                 {{/each}}
             </ul>
           </div>
+        </div>
+
+        <div class="col l6">
+          <h4>Bio</h4>
+          <ul class="collection">
+            <li>{{pet_name}}</li>
+            <li>Age: {{pet_age}}</li>
+            <li>Species: {{species}}</li>
+            <li>Gender: {{gender}}</li>
+            <li>Activity level: {{activity_level}}</li>
+            <li>Fixed: {{#if fixed}} yes {{else}} no {{/if}}</li>
+          </ul>
         </div>
     </div>
 </section>

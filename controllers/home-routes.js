@@ -7,7 +7,7 @@ router.get("/home", (req, res) => {
 
 router.get("/dashboard", async (req, res) => {
   // pk will be req.session.pet_id when session is all set up
-  const petInfo = await Pet.findByPk(1, {
+  const petInfo = await Pet.findByPk(3, {
     include: {model: Playdate, through: PetPlaydate, as: 'pet_playdates'}
   })
   const pet = petInfo.get({plain: true})
