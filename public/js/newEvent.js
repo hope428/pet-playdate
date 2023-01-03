@@ -1,6 +1,7 @@
 const dateField = document.getElementById("new-date");
 const locationField = document.getElementById("location-zip");
 const submitBtn = document.getElementById("enroll");
+const petId = document.getElementById("enroll").dataset.petid
 
 let alert;
 
@@ -8,8 +9,7 @@ const createNewDate = (event) => {
   event.preventDefault();
   const payload = {
     location: locationField.value,
-    // TODO: pet_id: current pet id will go here,
-    pet_id: 4,
+    pet_id: petId,
     date: dateField.value,
   }
   fetch("/api/playdates/new-playdate", {

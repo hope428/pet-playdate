@@ -24,20 +24,24 @@
                   <label>Playdate Location</label>
                   </div>
 
-                  <button id="enroll">Create Event</button>
+                  <button id="enroll" data-petid="{{id}}">Create Event</button>
             </form>
           </div>
         </div>
     </div>
 {{!--List for upcoming events--}}
+    <p>{{pet_name}}'s Events</p>
     <div class="row">
         <div class="col l6">
           <div class="card">
             <ul class="collection">
-                <li class="collection-item">Placeholder</li>
-                <li class="collection-item">Placeholder</li>
-                <li class="collection-item">Placeholder</li>
-                <li class="collection-item">Placeholder</li>
+                {{#each pet_playdates as |event|}}
+                <li>
+                  <span class="event-location">Location: {{event.location}}</span>
+                  <span class="event-date">Date: {{format_date event.date}}</span>
+                  {{!-- Can add other attending pets here --}}
+                </li>
+                {{/each}}
             </ul>
           </div>
         </div>
