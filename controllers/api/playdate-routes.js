@@ -4,21 +4,39 @@ const {Playdate, PetPlaydate, Pet} = require('../../models')
 // localhost:3001/api/playdates/new-playdate
 router.post("/new-playdate", async (req, res) => {
     try {
-      const newPlaydate = await Playdate.create({
-        //this will be from the playdate form
-        location: req.body.location,
-        //from date picker
-        date: req.body.date,
-      });
+      const playdate = await Playdate.findOne({
+        where: {
+          location: req.body.location,
+          date: req.body.date
+        }
+      })
 
-      //creates new petplaydate object for through table
-      const newPetPlaydate = await PetPlaydate.create({
-        // pet id can be tied to current pet's button with data-value
-        pet_id: req.body.pet_id,
-        playdate_id: newPlaydate.id
+      if(!playdate){
+        const newPlaydate = await Playdate.create({
+          location: req.body.location,
+          date: req.body.date,
+          pet_id: req.body.pet_id
+        });
+
+        const newPetPlaydate = await PetPlaydate.create({
+          // pet id can be tied to current pet's button with data-value
+          pet_id: req.body.pet_id,
+          playdate_id: newPlaydate.id
+        })
+        res.json("created new playdate")
+        return;
+      }
+      // updates through table to reflect pets added to playdate
+      const updatePetPlaydate = await PetPlaydate.findOne({
+        where: {
+          playdate_id: playdate.id,
+        }
+      })
+      await newPetPlaydate.update({
+        
       })
   
-      res.status(201).json(newPlaydate);
+      res.status(201).json("updating playdate");
     } catch (error) {
       res.status(500).json(error);
     }
