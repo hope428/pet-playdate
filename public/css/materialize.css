@@ -2,7 +2,7 @@
     font-family: 'Comfortaa', cursive;
 }
 /*Nav Bar*/
-.nav-wrapper, .material-icons , nav a {
+.nav-wrapper, nav a {
     background-color: #1785b6;
     color: #f8d152;
 }
