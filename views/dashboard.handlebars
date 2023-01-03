@@ -36,11 +36,12 @@
             <h4>Upcoming Events</h4>
             <ul class="collection">
                 {{#each pet_playdates as |event|}}
-                <li>
+                <a href="/events/{{event.id}}"><li>
                   <span class="event-location">Location: {{event.location}}</span>
                   <span class="event-date">Date: {{format_date event.date}}</span>
                   {{!-- Can add other attending pets here --}}
                 </li>
+                </a>
                 {{/each}}
             </ul>
           </div>
