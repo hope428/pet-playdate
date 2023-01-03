@@ -8,23 +8,6 @@
             <input type="text" class="datepicker" id="new-date"/>
             <label>Pick a date for your event</label>
           </div>
-        </div>
-    </div>
-{{!--List for upcoming events--}}
-    <div class="row">
-        <div class="col l6">
-          <div class="card">
-            <h4>Upcoming Events</h4>
-            <ul class="collection">
-                {{#each pet_playdates as |event|}}
-                <a href="/events/{{event.id}}"><li>
-                  <span class="event-location">Location: {{event.location}}</span>
-                  <span class="event-date">Date: {{format_date event.date}}</span>
-                  {{!-- Can add other attending pets here --}}
-                </li>
-                </a>
-                {{/each}}
-            </ul>
           <div class="input-field col s12 m3 l3">
             <select id="location-zip">
               <option class="disabled selected">Choose a location</option>
@@ -55,9 +38,9 @@
         <ul class="collection">
           {{#each pet_playdates as |event|}}
           <li>
+            <span><a href="/events/{{event.id}}">View Details</a></span>
             <span class="event-location">Location: {{event.location}}</span>
             <span class="event-date">Date: {{format_date event.date}}</span>
-            {{!-- Can add other attending pets here --}}
           </li>
           {{/each}}
         </ul>
