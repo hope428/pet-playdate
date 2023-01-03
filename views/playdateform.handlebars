@@ -1,5 +1,5 @@
 <section class="form-layout">
-    <div class="row">
+    <div class="column">
         <form class="col l12">
             <div class="name_age">
                 {{!-- input for pets name --}}
@@ -13,12 +13,6 @@
                     <label for="pet_age">Pet Age</label>
                 </div>
             </div>
-        </form>
-    </div>
-</section>
-<section class="second-layout">
-    <div class="column">
-        <form class="col l6">
             {{!-- dropdown to select the pets species --}}
             <div class="col s12 m12 l6">
                 <select>
@@ -32,8 +26,9 @@
             {{!-- slider for pet activeness --}}
             <div class="col s12 m12 l6">
                 <form action="#">
+                    <label>Activity level of your pet? (1 is chill/lazy, 5 is hyper)</label>
                     <p class="range-field">
-                        <input type="range" id="test5" min="1" max="5" />
+                        <input type="range" id="test5" min="1" max="5"/>
                     </p>
                 </form>
             </div>
@@ -43,13 +38,13 @@
                     <p>Gender of your pet?</p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio"/>
                             <span>Female</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio"/>
                             <span>Male</span>
                         </label>
                     </p>
@@ -58,16 +53,16 @@
             {{!-- fixed radio buttons --}}
             <div class="col s12 m12 l6">
                 <form action="#">
-                    <p>Is your pet fixed</p>
+                    <p>Is your pet fixed?</p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio"/>
                             <span>Yes</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input name="group1" type="radio" />
+                            <input name="group1" type="radio"/>
                             <span>No</span>
                         </label>
                     </p>
