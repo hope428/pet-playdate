@@ -12,7 +12,6 @@
 /*Cards*/
 .cards-test {
     display: flex;
-    margin-left: 30vh;
 }
 .card {
     margin: 2rem 0 0;
@@ -27,7 +26,7 @@
     height: 40vh;
     background-size: cover;
 }
-/*Dashboard*/
-/* .dashboard-layout {
-    display: flex;
-} */
+/* Form */
+.form-layout {
+    margin: 2%;
+}

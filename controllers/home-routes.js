@@ -8,4 +8,7 @@ router.get("/dashboard", (req, res) => {
   res.render("dashboard");
 });
 
+router.get("/playdateform", (req, res) => {
+  res.render("playdateform");
+});
 module.exports = router;
