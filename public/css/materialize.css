@@ -12,7 +12,6 @@
 /*Cards*/
 .cards-test {
     display: flex;
-    margin-left: 30vh;
 }
 .card {
     margin: 2rem 0 0;
@@ -28,6 +27,6 @@
     background-size: cover;
 }
 /* Form */
-.form-layout, .second-form {
+.form-layout {
     margin: 2%;
 }
