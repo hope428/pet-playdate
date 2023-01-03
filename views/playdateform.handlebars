@@ -1,0 +1,69 @@
+<section class="form-layout">
+    <div class="row">
+        <form class="col l12">
+            <div class="name_age">
+                {{!-- input for pets name --}}
+                <div class="input-field col l6">
+                    <input id="pet_name" type="text" class="validate">
+                    <label for="pet_name">Pet Name</label>
+                </div>
+                {{!-- input for pets age --}}
+                <div class="input-field col l6">
+                    <input id="pet_age" type="text" class="validate">
+                    <label for="pet_age">Pet Age</label>
+                </div>
+            </div>
+            {{!-- dropdown to select the pets species --}}
+            <div class="col l8">
+                <select>
+                    <option value="" disabled selected>Select your pets species</option>
+                    <option value="1">Dog</option>
+                    <option value="2">Cat</option>
+                    <option value="3">Bird</option>
+                    <option value="3">Lizard</option>
+                </select>
+            </div>
+            {{!-- slider for pet activeness --}}
+            <div class="col l8">
+                <form action="#">
+                    <p class="range-field">
+                        <input type="range" id="test5" min="1" max="5" />
+                    </p>
+                </form>
+            </div>
+            {{!-- gender radio buttons --}}
+            <div class="col l6">
+            <form action="#">
+                <p>Gender of your pet?</p>
+                <p>
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span>Female</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span>Male</span>
+                    </label>
+                </p>
+            </form>
+            {{!-- fixed radio buttons --}}
+            <form action="#">
+                <p>Is your pet fixed</p>
+                <p>
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span>Yes</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span>No</span>
+                    </label>
+                </p>
+            </form>
+        </form>
+    </div>
+</section>
