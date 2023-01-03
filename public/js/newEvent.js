@@ -1,6 +1,7 @@
 const dateField = document.getElementById("new-date");
 const locationField = document.getElementById("location-zip");
 const submitBtn = document.getElementById("enroll");
+
 let alert;
 
 const createNewDate = (event) => {
