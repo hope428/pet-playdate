@@ -38,9 +38,9 @@
         <ul class="collection">
           {{#each pet_playdates as |event|}}
           <li>
+            <span><a href="/events/{{event.id}}">View Details</a></span>
             <span class="event-location">Location: {{event.location}}</span>
             <span class="event-date">Date: {{format_date event.date}}</span>
-            {{!-- Can add other attending pets here --}}
           </li>
           {{/each}}
         </ul>

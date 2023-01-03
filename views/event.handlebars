@@ -1,0 +1,11 @@
+<div class="event-card card">
+    <h4>Location: {{location}}</h4>
+    <hr>
+    <h4>Date: {{format_date date}}</h4>
+    <hr>
+    <h4>Attending: </h4>
+    <ul>{{#each playdate_pets as |pet|}}
+            <li>{{pet_name}} the {{species}}</li>
+        {{/each}}
+    </ul>
+</div>
