@@ -3,10 +3,11 @@
 }
 /*Nav Bar*/
 .nav-wrapper, nav a {
-    background-color: #1785b6;
+    background-color: #f0801a;
     color: #f8d152;
 }
-.brand-logo {
+nav .brand-logo {
+    font-size: 2rem;
     margin-left: 1%;
 }
 /*Cards*/
@@ -27,6 +28,19 @@
     background-size: cover;
 }
 /* Form */
-.form-layout {
+.form-layout, .second-layout {
     margin: 2%;
+}
+.btn {
+    background-color: #1785b6;
+    color:#fff;
+}
+.btn:hover {
+    background-color: #72c3bd;
+}
+/* media controls */
+@media (max-width: 480px) {
+    nav .brand-logo {
+      font-size: 1rem;
+    }
 }
