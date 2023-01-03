@@ -1,32 +1,37 @@
 const dateField = document.getElementById("new-date");
-let alert;
-// TODO: zip code drop down selector
-// TODO: button selector 
+const locationField = document.getElementById("location-zip");
+const submitBtn = document.getElementById("enroll");
 
-const createNewDate = () => {
+let alert;
+
+const createNewDate = (event) => {
   event.preventDefault();
-  fetch("/new-playdate", {
+  const payload = {
+    location: locationField.value,
+    // TODO: pet_id: current pet id will go here,
+    pet_id: 4,
+    date: dateField.value,
+  }
+  fetch("/api/playdates/new-playdate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: {
-    // TODO: location: zip code goes here,
-    // TODO: pet_id: current pet id will go here,
-      date: dateField.value,
-    },
+    body: JSON.stringify(payload),
   }).then((res) => {
-    if(!res.ok){
-        //this should create alert on page if form didn't submit
-        alert = '<span>Something went wrong. Could not submit form</span>'
-        M.toast({html: alert});
-        dateField.value = ""
-        //TODO: clear zipcode selector as well
+    if (!res.ok) {
+      //this should create alert on page if form didn't submit
+      alert = "<span>Something went wrong. Could not submit form</span>";
+      M.toast({ html: alert });
+      dateField.value = "";
+      locationField.value = "";
     } else {
       //this should create alert on page if form submitted successfully
-      alert = '<span>New playdate created!</span>'
-      M.toast({html: alert});
-      //TODO: clear form
+      alert = "<span>New playdate created!</span>";
+      M.toast({ html: alert });
+      dateField.value = "";
+      locationField.value = "";
     }
   });
 };
 
-//TODO: button add event listener, calls createNewDate
+submitBtn.addEventListener("click", createNewDate);
+
