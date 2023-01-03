@@ -26,6 +26,7 @@ router.post('/login', async (req, res) => {
         
         req.session.save(() => {
             req.session.loggedIn = true;
+            req.session.email = user.email;
             res.status(200).json("Success logging in")
         })
     } catch (error) {
@@ -44,8 +45,16 @@ router.post('/signup', async (req, res) => {
     try {
         const newUser = await User.create({
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            pet_name: req.body.pet_name,
+            pet_age: req.body.pet_age,
+            species: req.body.species,
+            gender: req.body.gender,
+            activity_level: req.body.activity_level,
+            fixed: req.body.fixed,
         })
+        //send information to create new pet
+        
         console.log(req.body);
         res.status(200).json(newUser)
     } catch (error) {
