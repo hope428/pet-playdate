@@ -31,4 +31,8 @@ router.get("/events/:id", async (req, res) => {
 router.get("/playdateform", (req, res) => {
   res.render("playdateform");
 });
+
+router.get("/login", (req, res) => {
+  res.render("login");
+});
 module.exports = router;
