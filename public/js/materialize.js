@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 });
-
-
+// For hamburger menu
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
 //   Fetch login page upon click  
 const loginBtn = document.querySelector("#login-btn");
 
