@@ -1,20 +1,20 @@
-<section class="form-layout">
-    <div class="row">
+<section class="form-layout container">
+    <div class="column">
         <form class="col l12">
             <div class="name_age">
                 {{!-- input for pets name --}}
-                <div class="input-field col l6">
+                <div class="input-field col s12 m12 l6">
                     <input id="pet_name" type="text" class="validate">
                     <label for="pet_name">Pet Name</label>
                 </div>
                 {{!-- input for pets age --}}
-                <div class="input-field col l6">
+                <div class="input-field col s12 m12 l6">
                     <input id="pet_age" type="text" class="validate">
                     <label for="pet_age">Pet Age</label>
                 </div>
             </div>
             {{!-- dropdown to select the pets species --}}
-            <div class="col l8">
+            <div class="col s12 m12 l6">
                 <select>
                     <option value="" disabled selected>Select your pets species</option>
                     <option value="1">Dog</option>
@@ -24,46 +24,53 @@
                 </select>
             </div>
             {{!-- slider for pet activeness --}}
-            <div class="col l8">
+            <div class="col s12 m12 l6">
                 <form action="#">
+                    <label>Activity level of your pet? (1 is chill/lazy, 5 is hyper)</label>
                     <p class="range-field">
-                        <input type="range" id="test5" min="1" max="5" />
+                        <input type="range" id="test5" min="1" max="5"/>
                     </p>
                 </form>
             </div>
             {{!-- gender radio buttons --}}
-            <div class="col l6">
-            <form action="#">
-                <p>Gender of your pet?</p>
-                <p>
-                    <label>
-                        <input name="group1" type="radio" />
-                        <span>Female</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="group1" type="radio" />
-                        <span>Male</span>
-                    </label>
-                </p>
-            </form>
+            <div class="col s12 m12 l6">
+                <form action="#">
+                    <p>Gender of your pet?</p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio"/>
+                            <span>Female</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio"/>
+                            <span>Male</span>
+                        </label>
+                    </p>
+                </form>
+            </div>
             {{!-- fixed radio buttons --}}
-            <form action="#">
-                <p>Is your pet fixed</p>
-                <p>
-                    <label>
-                        <input name="group1" type="radio" />
-                        <span>Yes</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input name="group1" type="radio" />
-                        <span>No</span>
-                    </label>
-                </p>
-            </form>
+            <div class="col s12 m12 l6">
+                <form action="#">
+                    <p>Is your pet fixed?</p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio"/>
+                            <span>Yes</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio"/>
+                            <span>No</span>
+                        </label>
+                    </p>
+                </form>
+            </div>
+            <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
         </form>
     </div>
 </section>
