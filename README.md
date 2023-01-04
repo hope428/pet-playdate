@@ -1,67 +1,51 @@
-# Pet Playdate
+# Pet Playdate!
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+The motivation and purpose behind this project was to create an app that can be used to register and keep track of playdates. The app allows users to create an account, or login with existing credentials. Once logged in the user can register new pets and use those pets to create playdate events.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+It solves the issue of not having an app that can keep track of upcoming playdates. We learned a lot about linking the front end development to back end, as well as using a new styling database.
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Features](#features)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Nothing needs to be installed! Just head to the heroku link to get started!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Heroku deployment: [here](https://morning-journey-92654.herokuapp.com/home)
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Desktop/tablet view:
+![desktop screenshot](./public/images/screenshot.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Mobile view:
+![mobile screenshot](./public/images/mobile1.png)
+![mobile screenshot2](./public/images/mobile2.png)
+
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Leon F. [https://github.com/hope428](https://github.com/hope428)
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+Brian C. [https://github.com/BrianSChapman](https://github.com/BrianSChapman)
 
-If you followed tutorials, include links to those here as well.
+Morgan D. [https://github.com/M-Dickerson](https://github.com/M-Dickerson)
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
 
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
 ## Features
 
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and 
+- Login and signout features. Once your account is created, all your data gets saved to your profile!
+- A hamburger menu displays in the navbar for easy page switching
+- A dashboard complete with upcoming events, a small biography of your registered pets, and an area to create new playdate events!
