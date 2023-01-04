@@ -6,6 +6,10 @@ router.get("/home", (req, res) => {
   res.render("homepage", { loggedIn: req.session.loggedIn });
 });
 
+router.get("/", (req, res) => {
+  res.render("homepage", { loggedIn: req.session.loggedIn });
+});
+
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     if (req.session.UserId) {
@@ -38,7 +42,7 @@ router.get("/events/:id", withAuth, async (req, res) => {
 });
 
 router.get("/playdateform", (req, res) => {
-  res.render("playdateform");
+  res.render("playdateform", {loggedIn: req.session.loggedIn});
 });
 
 router.get("/login", (req, res) => {
