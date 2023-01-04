@@ -1,11 +1,18 @@
-<div class="event-card card container">
-    <h4>Location: {{location}}</h4>
-    <hr>
-    <h4>Date: {{format_date date}}</h4>
-    <hr>
-    <h4>Attending: </h4>
-    <ul>{{#each playdate_pets as |pet|}}
-            <li>{{pet_name}} the {{species}}</li>
-        {{/each}}
-    </ul>
-</div>
+<section class="event-card">
+    <div class="column">
+        <div class="container">
+            <h4>Location: {{location}}</h4>
+            <hr>
+            <h4>Date: {{format_date date}}</h4>
+            <hr>
+            <h4>Attending: </h4>
+            <ul>{{#each playdate_pets as |pet|}}
+                <li>{{pet_name}} the {{species}}</li>
+                {{/each}}
+            </ul>
+            <div class="input-field col s12 m3 l3">
+                <a href="/dashboard" class="waves-effect waves-light btn btn-large">back to dashboard</a>
+            </div>
+        </div>
+    </div>
+</section>

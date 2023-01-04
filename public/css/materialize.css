@@ -22,23 +22,6 @@ nav .brand-logo {
 .card {
     margin: 2rem 0 0;
 }
-.dashboard-button {
-    background-color: #1785b6;
-    border: none;
-    border-radius: 2px;
-    height: 54px;
-    color: white;
-    padding: 0 28px;
-    text-align: center;
-    text-decoration:none;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    display: inline-block;
-    font-size: 15px;
-  }
-  .dashboard-button:hover {
-    background-color: #72c3bd;
-  }
 /* Hero image */
 .hero-image {
     background-image: url("../images/pawprint.jpg");
