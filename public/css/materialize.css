@@ -22,8 +22,10 @@ nav .brand-logo {
 .card {
     margin: 2rem 0 0;
 }
+/* Toast popup */
 .toast {
     background-color: #f8d152;
+    color: #f0801a;
 }
 /* Hero image */
 .hero-image {
