@@ -25,8 +25,6 @@ router.post("/new-playdate", async (req, res) => {
       res.json("created new playdate");
       return;
     }
-    console.log(playdate.id);
-    console.log(req.body.pet_id);
     // updates through table to reflect pets added to playdate
     const updatePetPlaydate = await PetPlaydate.create({
       playdate_id: playdate.id,
@@ -39,7 +37,7 @@ router.post("/new-playdate", async (req, res) => {
   }
 });
 
-//this route gets back all playdates and pets associated with that playdate
+//this route gets back all pets and playdates associated with that pet
 router.get("/", async (req, res) => {
   try {
     const playdates = await Pet.findAll({
@@ -49,6 +47,7 @@ router.get("/", async (req, res) => {
   } catch (error) {}
 });
 
+//route gets back all playdates and lists pets associated with that playdate
 router.get('/all', async(req, res) => {
   try {
     const playdates = await Playdate.findAll({
