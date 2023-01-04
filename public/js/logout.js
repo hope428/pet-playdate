@@ -1,4 +1,5 @@
 const logoutBtn = document.getElementById("logout-btn");
+const logoutBtnMobile = document.getElementById("logout-btn-mobile");
 
 const logout = () => {
   fetch("/api/users/logout", {
@@ -15,3 +16,6 @@ const logout = () => {
 if (logoutBtn) {
   logoutBtn.addEventListener("click", logout);
 }
+if (logoutBtnMobile) {
+    logoutBtnMobile.addEventListener("click", logout);
+  }
