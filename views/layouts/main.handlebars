@@ -29,7 +29,11 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/playdateform">Register</a></li>
+        {{#if loggedIn}}
         <li><a href="/login">Login</a></li>
+        {{else}}
+        <li><a href="#" id="logout">Logout</a></li>
+        {{/if}}
       </ul>
     </div>
   </nav>
@@ -48,7 +52,7 @@
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="/js/home.js"></script>
+  <script src="/js/logout.js"></script>
   <script type="text/javascript" src="./js/materialize.js"></script>
 </body>
 
