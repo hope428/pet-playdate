@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {User} = require('../../models')
+const {User, Pet} = require('../../models')
 
 
 //localhost:3001/api/users/login
@@ -41,17 +41,21 @@ router.post('/signup', async (req, res) => {
         const newUser = await User.create({
             email: req.body.email,
             password: req.body.password,
+        })
+
+        const newPet = await Pet.create({
             pet_name: req.body.pet_name,
             pet_age: req.body.pet_age,
             species: req.body.species,
             gender: req.body.gender,
             activity_level: req.body.activity_level,
             fixed: req.body.fixed,
+            user_id: newUser.id
         })
         //send information to create new pet
         
         console.log(req.body);
-        res.status(200).json(newUser)
+        res.status(200).json("Sign up successful")
     } catch (error) {
         console.log(error);
         res.status(500).json(error)
