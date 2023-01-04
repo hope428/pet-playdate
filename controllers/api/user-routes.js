@@ -36,11 +36,6 @@ router.post('/login', async (req, res) => {
 })
 
 //localhost:3001/api/users/signup
-router.get('/signup', async (req, res) => {
-    //placeholder for /api/users/signup
-    res.send("signup here!")
-})
-
 router.post('/signup', async (req, res) => {
     try {
         const newUser = await User.create({
