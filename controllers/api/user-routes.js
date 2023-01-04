@@ -38,11 +38,12 @@ router.post('/login', async (req, res) => {
 //localhost:3001/api/users/signup
 router.post('/signup', async (req, res) => {
     try {
+    //send info to create new user
         const newUser = await User.create({
             email: req.body.email,
             password: req.body.password,
         })
-
+    //send information to create new pet
         const newPet = await Pet.create({
             pet_name: req.body.pet_name,
             pet_age: req.body.pet_age,
@@ -52,10 +53,12 @@ router.post('/signup', async (req, res) => {
             fixed: req.body.fixed,
             user_id: newUser.id
         })
-        //send information to create new pet
         
-        console.log(req.body);
-        res.status(200).json("Sign up successful")
+        req.session.save(() => {
+            req.session.loggedIn = true;
+            req.session.UserId = newUser.id;
+            res.status(200).json('Signed up!')
+        })
     } catch (error) {
         console.log(error);
         res.status(500).json(error)
