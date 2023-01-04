@@ -35,7 +35,7 @@ const signup = (event) => {
     },
   }).then((res) => {
     if (res.ok) {
-      window.location.href = "/dashboard";
+      window.location.assign("/dashboard")
     } else {
       alert("Failed to sign you up. Please try again");
       // Maybe a modal here?
