@@ -9,17 +9,8 @@ const gender = document.getElementById("#gender");
 const activityLevel = document.getElementById("#activity-level");
 const fixed = document.getElementById("#fixed");
 
-signup = () => {
+signup = (event) => {
   event.preventDefault();
-
-  username.value = "";
-  password.value = "";
-  petName.value = "";
-  pet_age.value = "";
-  species.value = "";
-  gender.value = "";
-  activityLevel.value = "";
-  fixed.value = "";
 
   const loginUser = username.value;
   const loginPassword = password.value;
@@ -29,6 +20,15 @@ signup = () => {
   const gender = gender.value;
   const activityLevel = activityLevel.value;
   const fixed = fixed.value;
+  
+  username.value = "";
+  password.value = "";
+  petName.value = "";
+  pet_age.value = "";
+  species.value = "";
+  gender.value = "";
+  activityLevel.value = "";
+  fixed.value = "";
 
   fetch("/signup", {
     method: "POST",
