@@ -3,7 +3,7 @@ const loginBtn = document.getElementById("#login-btn");
 const username = document.getElementById("#username");
 const password = document.getElementById("#password");
 
-login = () => {
+login = (event) => {
   event.preventDefault();
 
   username.value = "";

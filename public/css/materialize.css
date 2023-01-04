@@ -10,7 +10,21 @@ nav .brand-logo {
     font-size: 2rem;
     margin-left: 1%;
 }
-/* Dashboard */
+#login-card {
+    position: relative;
+    margin-right: 8%;
+    opacity: 95%;   
+}
+
+#home-login {
+    position:relative;
+    margin-left: 5%;
+}
+
+/*Cards*/
+.cards-test {
+    display: flex;
+}
 .card {
     margin: 2rem 0 0;
 }

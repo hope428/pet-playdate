@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Play Date</title>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" href="/css/materialize.css">
-      <link rel="stylesheet" href="/css/styles.css" />
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      {{!--Google fonts--}}
-      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Play Date</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/materialize.css">
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{!--Google fonts--}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+
+<body>
   <!--Navbar-->
-    <nav>
-        <div class="nav-wrapper z-depth-2">
-            <a href="/home" class="brand-logo"><i class="material-icons">pets</i>Pet Play Date!</a>
-              <ul id="nav-mobile" class="right">
-                <li><a href="#">Login</a></li>
-              </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="nav-wrapper z-depth-2">
+      <a class="brand-logo"><i class="material-icons">pets</i>Pet Play Date!</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{!-- <a href='#'>Login</a> --}}
+
+      </ul>
+      </ul>
+    </div>
+  </nav>
   <!--Hero Image-->
-  <div class= "hero-image"></div>
+  <div class="hero-image">
+    <div class="row">
+      <div class="card blue-grey darken-1 right z-depth-2" id="login-card">
+        <div class="card-content white-text">
+          <span class="card-title">Login</span>
+          <div class="input-field">
+            <input type="text" id="username">
+            <i class="material-icons">account_circle</i>
+            <div class="input-field"></div>
+            <label for="username">Username</label>
+            <div class="input-field">
+              <input type="text" id="password">
+              <i class="material-icons">lock</i>
+              <label for="password">Password</label>
+            </div>
+          </div>
+        </div>
+        {{!-- <div class="card-action"> --}}
+          <button class="btn waves-effect waves-light btn-small" id="home-login" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!--
+  </div> --}}
   {{!--DO NOT ERASE--}}
   {{{body}}}
+  </div>
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   {{!--J Query--}}
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="public\js\home.js"></script>
   <script type="text/javascript" src="./js/materialize.js"></script>
-  </body>
+</body>
+
 </html>
