@@ -6,6 +6,10 @@ router.get("/home", (req, res) => {
   res.render("homepage", { loggedIn: req.session.loggedIn });
 });
 
+router.get("/", (req, res) => {
+  res.render("homepage", { loggedIn: req.session.loggedIn });
+});
+
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     if (req.session.UserId) {

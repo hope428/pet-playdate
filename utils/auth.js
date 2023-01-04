@@ -1,6 +1,6 @@
 const withAuth = (req, res, next) => {
     if(!req.session.loggedIn){
-        res.redirect('/playdateform')
+        res.redirect('/redirect')
     } else {
         next();
     }
