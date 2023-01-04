@@ -1,40 +1,35 @@
 // need to remember to create these IDs in the template
-const signupBtn = document.getElementById("#signup-btn");
-const username = document.getElementById("#username");
-const password = document.getElementById("#password");
-const petName = document.getElementById("#pet-name");
-const pet_age = document.getElementById("#pet-age");
-const species = document.getElementById("#species");
-const gender = document.getElementById("#gender");
-const activityLevel = document.getElementById("#activity-level");
-const fixed = document.getElementById("#fixed");
+const signupBtn = document.getElementById("signup-btn");
+const newUsername = document.getElementById("new-username");
+const newPassword = document.getElementById("new-password");
+const petName = document.getElementById("pet_name");
+const petAge = document.getElementById("pet_age");
+const species = document.getElementById("species");
+const activityLevel = document.getElementById("activity_level");
 
-signup = (event) => {
+const signup = (event) => {
   event.preventDefault();
+  //gets values from form
+  const loginUserVal = newUsername.value;
+  const loginPasswordVal = newPassword.value;
+  const petNameVal = petName.value;
+  const petAgeVal = petAge.value;
+  const speciesVal = species.value;
+  const genderVal = document.querySelector('input[name="gender"]:checked').value
+  const activityLevelVal = activityLevel.value;
+  const fixedVal = document.querySelector('input[name="fixed"]:checked').value;
 
-  const loginUser = username.value;
-  const loginPassword = password.value;
-  const name = petName.value;
-  const age = pet_age.value;
-  const species = species.value;
-  const gender = gender.value;
-  const activityLevel = activityLevel.value;
-  const fixed = fixed.value;
-  
-  username.value = "";
-  password.value = "";
-  petName.value = "";
-  pet_age.value = "";
-  species.value = "";
-  gender.value = "";
-  activityLevel.value = "";
-  fixed.value = "";
-
-  fetch("/signup", {
+  fetch("/api/users/signup", {
     method: "POST",
     body: JSON.stringify({
-      loginUser,
-      loginPassword,
+      email: loginUserVal,
+      password: loginPasswordVal,
+      pet_name: petNameVal,
+      pet_age: petAgeVal,
+      species: speciesVal,
+      gender: genderVal,
+      activity_level: activityLevelVal,
+      fixed: fixedVal,
     }),
     headers: {
       "Content-Type": "application/json",
