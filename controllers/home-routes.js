@@ -44,4 +44,9 @@ router.get("/playdateform", (req, res) => {
 router.get("/login", (req, res) => {
   res.render("login", {loggedIn: req.session.loggedIn});
 });
+
+router.get("/redirect", (req,res) => {
+  res.render("redirect")
+});
+
 module.exports = router;
