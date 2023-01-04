@@ -1,3 +1,11 @@
+{{#if loggedIn}}
+<div class="container">
+    <h3>You are already registered!</h3>
+    <div class="input-field col s12 m3 l3">
+                <a href="/dashboard" class="waves-effect waves-light btn btn-large">back to dashboard</a>
+            </div>
+    </div>
+{{else}}
 <section class="form-layout container">
     <div class="column">
         <form class="col l12">
@@ -87,3 +95,4 @@
     </div>
 </section>
 <script src="/js/signup.js"></script>
+{{/if}}

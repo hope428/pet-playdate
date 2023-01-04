@@ -38,7 +38,7 @@ router.get("/events/:id", withAuth, async (req, res) => {
 });
 
 router.get("/playdateform", (req, res) => {
-  res.render("playdateform");
+  res.render("playdateform", {loggedIn: req.session.loggedIn});
 });
 
 router.get("/login", (req, res) => {
