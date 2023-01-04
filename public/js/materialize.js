@@ -25,7 +25,7 @@ loginClick = (event) => {
       window.location.href = "/login";
     } else {
         alert = "<span>Something went wrong. Please try again.</span>";
-        M.toast({ html: alert });
+        M.toast({ html: alert, classes: 'toast'});
     }
   });
 };
