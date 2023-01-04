@@ -30,9 +30,9 @@
         <li><a href="/dashboard">Dashboard</a></li>
         <li><a href="/playdateform">Register</a></li>
         {{#if loggedIn}}
-        <li><a href="/login">Login</a></li>
+        <li><a id="logout-btn">Logout</a></li>
         {{else}}
-        <li><a href="#" id="logout">Logout</a></li>
+        <li><a href="login">Login</a></li>
         {{/if}}
       </ul>
     </div>
@@ -41,11 +41,16 @@
   <ul class="sidenav" id="mobile-demo">
     <li><a href="/dashboard">Dashboard</a></li>
     <li><a href="/playdateform">Register</a></li>
+    {{#if loggedIn}}
+    <li><a href="login">Logout</a></li>
+    {{else}}
     <li><a href="login">Login</a></li>
+    {{/if}}
   </ul>
   <!--Hero Image-->
   <div class="hero-image"></div>
   {{!--DO NOT ERASE--}}
+  {{log this}}
   {{{body}}}
   </div>
   {{!--J Query--}}

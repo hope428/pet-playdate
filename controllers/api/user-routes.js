@@ -2,11 +2,6 @@ const router = require('express').Router();
 const {User, Pet} = require('../../models')
 
 
-//localhost:3001/api/users/login
-router.get('/login', (req, res) => {
-    res.send("you are at the login page")
-})
-
 router.post('/login', async (req, res) => {
     try {
         const user = await User.findOne({
@@ -26,7 +21,7 @@ router.post('/login', async (req, res) => {
         
         req.session.save(() => {
             req.session.loggedIn = true;
-            req.session.email = user.email;
+            req.session.UserId = user.id;
             res.status(200).json("Success logging in")
         })
     } catch (error) {
@@ -65,6 +60,7 @@ router.post('/signup', async (req, res) => {
     }
 })
 
+// /api/users/logout
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

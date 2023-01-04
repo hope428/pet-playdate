@@ -1,4 +1,4 @@
-const logoutBtn = document.getElementById("logout");
+const logoutBtn = document.getElementById("logout-btn");
 
 const logout = () => {
   fetch("/api/users/logout", {
@@ -12,5 +12,6 @@ const logout = () => {
     }
   });
 };
-
-logoutBtn.addEventListener("click", logout);
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", logout);
+}

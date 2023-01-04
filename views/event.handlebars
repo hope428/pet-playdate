@@ -1,12 +1,12 @@
 <section class="event-card">
     <div class="column">
         <div class="container">
-            <h4>Location: {{location}}</h4>
+            <h4>Location: {{eventData.location}}</h4>
             <hr>
-            <h4>Date: {{format_date date}}</h4>
+            <h4>Date: {{format_date eventData.date}}</h4>
             <hr>
             <h4>Attending: </h4>
-            <ul>{{#each playdate_pets as |pet|}}
+            <ul>{{#each eventData.playdate_pets as |pet|}}
                 <li>{{pet_name}} the {{species}}</li>
                 {{/each}}
             </ul>
