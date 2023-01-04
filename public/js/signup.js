@@ -38,7 +38,6 @@ const signup = (event) => {
       window.location.assign("/dashboard")
     } else {
       alert("Failed to sign you up. Please try again");
-      // Maybe a modal here?
     }
   });
 };
