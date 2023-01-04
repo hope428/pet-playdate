@@ -30,7 +30,7 @@ signup = (event) => {
   activityLevel.value = "";
   fixed.value = "";
 
-  fetch("/signup", {
+  fetch("/playdateform", {
     method: "POST",
     body: JSON.stringify({
       loginUser,

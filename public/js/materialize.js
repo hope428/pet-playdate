@@ -10,10 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.FormSelect.init(elems);
 });
 
-// Login button on homepage
 
+//   Fetch login page upon click  
+const loginBtn = document.querySelector("#login-btn");
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.dropdown-trigger');
-    var instances = M.Dropdown.init(elems, options);
+loginClick = (event) => {
+  event.preventDefault();
+
+  fetch("/login") 
+    .then((res) => {
+    if (res.ok) {
+      window.location.href = "/login";
+    } else {
+        alert = "<span>Something went wrong. Please try again.</span>";
+        M.toast({ html: alert });
+    }
   });
+};

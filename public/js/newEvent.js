@@ -34,4 +34,3 @@ const createNewDate = (event) => {
 };
 
 submitBtn.addEventListener("click", createNewDate);
-
