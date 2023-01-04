@@ -3,16 +3,18 @@ const loginBtn = document.getElementById("#login-btn");
 const username = document.getElementById("#username");
 const password = document.getElementById("#password");
 
+let alert;
+
 login = (event) => {
   event.preventDefault();
-
-  username.value = "";
-  password.value = "";
 
   const loginUser = username.value;
   const loginPassword = password.value;
 
-  //   For separate login page
+  username.value = "";
+  password.value = "";
+
+  //   Attempting to login
   fetch("/login", {
     method: "POST",
     body: JSON.stringify({
@@ -26,10 +28,11 @@ login = (event) => {
     if (res.ok) {
       window.location.href = "/dashboard";
     } else {
-      alert("Login failed. Please try again");
-      // Maybe a modal here?
-    }
-  });
+      alert = "<span>Something went wrong. Please try again.</span>";
+      M.toast({ html: alert });
+      username.value = "";
+      password.value = "";
+  }});
 };
 
 loginBtn.addEventListener("click",login);
