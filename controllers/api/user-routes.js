@@ -1,13 +1,8 @@
 const router = require('express').Router();
 const {User, Pet} = require('../../models')
 
-
-//localhost:3001/api/users/login
-router.get('/login', (req, res) => {
-    res.send("you are at the login page")
-})
-
 router.post('/login', async (req, res) => {
+    console.log("We did it!",req);
     try {
         const user = await User.findOne({
             where: {

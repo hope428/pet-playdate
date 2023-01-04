@@ -3,19 +3,20 @@
         <form class="col s12 m12 l12">
             <div class="login">
                 {{!-- input for username --}}
-                <div class="input-field col s12 m12 l6">
-                    <input id="#" type="text" class="validate">
-                    <label for="email">Email</label>
+                <div class="input-field col s12 m12 l6 email">
+                    <input id="username" type="text" class="validate">
+                    <label for="username">Email</label>
                 </div>
                 {{!-- input for password --}}
-                <div class="input-field col s12 m12 l6">
-                    <input id="#" type="password" class="validate">
+                <div class="input-field col s12 m12 l6 password">
+                    <input id="password" type="password" class="validate">
                     <label for="password">Password</label>
                 </div>
             </div>
         </form>
     </div>
-    <div class="input-field col s12 m3 l3">
-        <a href="#" class="waves-effect waves-light btn btn-large">login</a>
+    <div class="input-field col s12 m3 l3 submit">
+        <a href="#" class="waves-effect waves-light btn btn-large" id="submit">login</a>
     </div>
 </section>
+<script src="/js/login.js"></script>
