@@ -1,11 +1,12 @@
 const router = require("express").Router();
 const { Playdate, PetPlaydate, Pet } = require("../models");
+const withAuth = require('../utils/auth');
 
 router.get("/home", (req, res) => {
   res.render("homepage", { loggedIn: req.session.loggedIn });
 });
 
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     if (req.session.UserId) {
       const petId = await Pet.findOne({
@@ -27,7 +28,7 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
-router.get("/events/:id", async (req, res) => {
+router.get("/events/:id", withAuth, async (req, res) => {
   const event = await Playdate.findByPk(req.params.id, {
     include: { model: Pet, through: PetPlaydate, as: "playdate_pets" },
   });
