@@ -15,16 +15,10 @@ nav .brand-logo {
     margin-right: 8%;
     opacity: 95%;   
 }
-
-#home-login {
-    position:relative;
-    margin-left: 5%;
+.collection {
+    padding: 1%;
 }
-
-/*Cards*/
-.cards-test {
-    display: flex;
-}
+/* Cards */
 .card {
     margin: 2rem 0 0;
 }
@@ -51,6 +45,10 @@ nav .brand-logo {
     background-repeat: no-repeat;
     height: 40vh;
     background-size: cover;
+}
+#home-login {
+    position:relative;
+    margin-left: 5%;
 }
 /* Playdate form*/
 .btn {
