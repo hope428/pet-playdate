@@ -3,6 +3,7 @@ const {User, Pet} = require('../../models')
 
 
 router.post('/login', async (req, res) => {
+    console.log("We did it!",req);
     try {
         const user = await User.findOne({
             where: {

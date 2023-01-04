@@ -1,4 +1,3 @@
-// need to remember to create these IDs in the template
 const signupBtn = document.getElementById("signup-btn");
 const newUsername = document.getElementById("new-username");
 const newPassword = document.getElementById("new-password");
