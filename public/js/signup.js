@@ -1,4 +1,3 @@
-// need to remember to create these IDs in the template
 const signupBtn = document.getElementById("signup-btn");
 const newUsername = document.getElementById("new-username");
 const newPassword = document.getElementById("new-password");
@@ -36,7 +35,7 @@ const signup = (event) => {
     },
   }).then((res) => {
     if (res.ok) {
-      window.location.href = "/dashboard";
+      window.location.assign("/dashboard")
     } else {
       alert("Failed to sign you up. Please try again");
       // Maybe a modal here?
