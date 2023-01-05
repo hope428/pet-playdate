@@ -47,7 +47,8 @@ router.post('/signup', async (req, res) => {
             gender: req.body.gender,
             activity_level: req.body.activity_level,
             fixed: req.body.fixed,
-            user_id: newUser.id
+            pet_img: req.body.pet_img,
+            user_id: newUser.id,
         })
         
         req.session.save(() => {
