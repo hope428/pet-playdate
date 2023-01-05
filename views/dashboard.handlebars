@@ -49,7 +49,25 @@
 
     <div class="col s12 m6 l6">
       <h4>Bio</h4>
-      <img src="{{pet.pet_img}}"/>
+      <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{pet.pet_img}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{pet.pet_name}}<i class="material-icons right">more_vert</i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{pet.pet_name}}<i class="material-icons right">close</i></span>
+      <ul class="collection">
+        <li>Age: {{pet.pet_age}}</li>
+        <li>Species: {{pet.species}}</li>
+        <li>Gender: {{pet.gender}}</li>
+        <li>Activity level: {{pet.activity_level}}</li>
+        <li>Fixed: {{#if pet.fixed}} yes {{else}} no {{/if}}</li>
+      </ul>
+    </div>
+  </div>
+      {{!-- <img src="{{pet.pet_img}}"/>
       <ul class="collection">
         <li>{{pet.pet_name}}</li>
         <li>Age: {{pet.pet_age}}</li>
@@ -60,7 +78,7 @@
       </ul>
     </div>
   </div>
-  </div>
+  </div> --}}
 </section>
 
 {{!-- TODO: Find a way to link this with the form --}}
