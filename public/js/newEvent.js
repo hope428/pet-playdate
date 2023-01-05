@@ -20,13 +20,13 @@ const createNewDate = (event) => {
     if (!res.ok) {
       //this should create alert on page if form didn't submit
       alert = "<span>Something went wrong. Could not submit form</span>";
-      M.toast({ html: alert });
+      M.toast({ html: alert, classes: 'toast'});
       dateField.value = "";
       locationField.value = "";
     } else {
       //this should create alert on page if form submitted successfully
       alert = "<span>New playdate created!</span>";
-      M.toast({ html: alert });
+      M.toast({ html: alert, classes: 'toast'});
       dateField.value = "";
       locationField.value = "";
     }

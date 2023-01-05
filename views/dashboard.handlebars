@@ -5,7 +5,7 @@
       <div class="card">
         <form>
           <div class="input-field col s12 m6 l6">
-            <input type="text" class="datepicker" id="new-date"/>
+            <input type="text" class="datepicker" id="new-date" />
             <label>Pick a date for your event</label>
           </div>
           <div class="input-field col s12 m3 l3">
@@ -25,8 +25,8 @@
             <label>Playdate Location</label>
           </div>
           <div class="input-field col s12 m3 l3">
-                <a class="waves-effect waves-light btn btn-large" id="enroll" data-petid="{{pet.id}}">Create Event</a>
-            </div>
+            <a class="waves-effect waves-light btn btn-large" id="enroll" data-petid="{{pet.id}}">Create Event</a>
+          </div>
         </form>
       </div>
     </div>
@@ -34,20 +34,20 @@
   {{!--List for upcoming events--}}
   <div class="row">
     <div class="col s12 m6 l6">
-        <h4>Upcoming Events</h4>
-        <ul class="collection">
-          {{#each pet.pet_playdates as |event|}}
-          <li>
-            <span class="event-location">Location: {{event.location}} | </span>
-            <span class="event-date">Date: {{format_date event.date}} | </span>
-            <span><a href="/events/{{event.id}}">View Details</a></span>
-          </li>
-          <hr>
-          {{/each}}
-        </ul>
+      <h4>Upcoming Events</h4>
+      <ul class="collection">
+        {{#each pet.pet_playdates as |event|}}
+        <li>
+          <span class="event-location">Location: {{event.location}} | </span>
+          <span class="event-date">Date: {{format_date event.date}} | </span>
+          <span><a href="/events/{{event.id}}">View Details</a></span>
+        </li>
+        <hr>
+        {{/each}}
+      </ul>
     </div>
 
-  <div class="col s12 m6 l6">
+    <div class="col s12 m6 l6">
       <h4>Bio</h4>
       <img src="{{pet.pet_img}}"/>
       <ul class="collection">
@@ -62,4 +62,9 @@
   </div>
   </div>
 </section>
+
+{{!-- TODO: Find a way to link this with the form --}}
+<input type="file" id="file" accept="image/jpeg, image/png, image/jpg">
+<img id="image">
+{{!-- TODO: What's above ^ --}}
 <script src="/js/newEvent.js"></script>

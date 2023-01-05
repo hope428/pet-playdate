@@ -1,3 +1,11 @@
+{{#if loggedIn}}
+<div class="container">
+    <h3>You are already registered!</h3>
+    <div class="input-field col s12 m3 l3">
+                <a href="/dashboard" class="waves-effect waves-light btn btn-large">back to dashboard</a>
+            </div>
+    </div>
+{{else}}
 <section class="form-layout container">
     <div class="column">
         <form class="col l12">
@@ -25,6 +33,18 @@
                     <label for="pet_age">Pet Age</label>
                 </div>
             </div>
+            {{!-- TODO: Submit file section of form --}}
+            <form action="#">
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+            </form>
             {{!-- dropdown to select the pets species --}}
             <div class="col s12 m12 l6">
                 <select id="species">
@@ -40,7 +60,7 @@
                 <form>
                     <label>Activity level of your pet? (1 is chill/lazy, 5 is hyper)</label>
                     <p class="range-field">
-                        <input type="range" id="activity_level" min="1" max="5"/>
+                        <input type="range" id="activity_level" min="1" max="5" />
                     </p>
                 </form>
             </div>
@@ -50,13 +70,13 @@
                     <p>Gender of your pet?</p>
                     <p>
                         <label>
-                            <input value="Female" name="gender" type="radio"/>
+                            <input value="Female" name="gender" type="radio" />
                             <span>Female</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input value="Male" name="gender" type="radio"/>
+                            <input value="Male" name="gender" type="radio" />
                             <span>Male</span>
                         </label>
                     </p>
@@ -68,13 +88,13 @@
                     <p>Is your pet fixed?</p>
                     <p>
                         <label>
-                            <input value="true" name="fixed" type="radio"/>
+                            <input value="true" name="fixed" type="radio" />
                             <span>Yes</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input value="false" name="fixed" type="radio"/>
+                            <input value="false" name="fixed" type="radio" />
                             <span>No</span>
                         </label>
                     </p>

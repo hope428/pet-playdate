@@ -25,7 +25,15 @@ loginClick = (event) => {
       window.location.href = "/login";
     } else {
         alert = "<span>Something went wrong. Please try again.</span>";
-        M.toast({ html: alert });
+        M.toast({ html: alert, classes: 'toast'});
     }
   });
 };
+const file = document.querySelector("#file")
+file.addEventListener("change", function() {
+  const reader = new FileReader()
+  reader.addEventListener("load", () => {
+    document.querySelector("#image").src = reader.result
+  })
+  reader.readAsDataURL(this.files[0]);
+})

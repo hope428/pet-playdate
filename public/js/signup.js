@@ -5,6 +5,7 @@ const petName = document.getElementById("pet_name");
 const petAge = document.getElementById("pet_age");
 const species = document.getElementById("species");
 const activityLevel = document.getElementById("activity_level");
+let signupAlert;
 let petUrl;
 
 var myWidget = cloudinary.createUploadWidget(
@@ -57,12 +58,19 @@ const signup = (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((res) => {
+  }).then(async (res) => {
     if (res.ok) {
       window.location.assign("/dashboard")
     } else {
-      alert("Failed to sign you up. Please try again");
-      // Maybe a modal here?
+      const data = await res.json()
+      console.log(data);
+      if(data.errors[0].message === "Validation len on password failed"){
+        signupAlert = "Your password must be at least 6 characters!"
+        M.toast({ html: signupAlert, classes: 'toast'});
+      } else if (data.errors[0].message === "email must be unique") {
+        signupAlert = "Email already registered!"
+        M.toast({ html: signupAlert, classes: 'toast'});
+      }
     }
   });
 };
