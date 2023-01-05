@@ -10,42 +10,34 @@
     <div class="column">
         <form class="col l12">
             <div class="name_age">
-                {{!-- input for username --}}
+                {{!-- Input for username --}}
                 <div class="input-field col s12 m12 l6">
                     <input id="new-username" type="text" class="validate">
                     <label for="new-username">Email</label>
                 </div>
-                {{!-- input for password --}}
+                {{!-- Input for password --}}
                 <div class="input-field col s12 m12 l6">
                     <input id="new-password" type="password" class="validate">
                     <label for="new-password">Password</label>
                 </div>
             </div>
             <div class="name_age">
-                {{!-- input for pets name --}}
+                {{!-- Input for pets name --}}
                 <div class="input-field col s12 m12 l6">
                     <input id="pet_name" type="text" class="validate">
                     <label for="pet_name">Pet Name</label>
                 </div>
-                {{!-- input for pets age --}}
+                {{!-- Input for pets age --}}
                 <div class="input-field col s12 m12 l6">
                     <input id="pet_age" type="text" class="validate">
                     <label for="pet_age">Pet Age</label>
                 </div>
             </div>
-            {{!-- TODO: Submit file section of form --}}
-            <form action="#">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>File</span>
-                        <input type="file">
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text">
-                    </div>
-                </div>
-            </form>
-            {{!-- dropdown to select the pets species --}}
+            {{!-- Upload picture button --}}
+            <div class="input-field col s12 m3 l3">
+                <a id="upload_widget" href="#" class="cloudinary-button">Upload picture</a>
+            </div>
+            {{!-- Dropdown to select the pets species --}}
             <div class="col s12 m12 l6">
                 <select id="species">
                     <option value="" disabled selected>Select your pets species</option>
@@ -55,7 +47,7 @@
                     <option value="Lizard">Lizard</option>
                 </select>
             </div>
-            {{!-- slider for pet activeness --}}
+            {{!-- Slider for pet activeness --}}
             <div class="col s12 m12 l6">
                 <form>
                     <label>Activity level of your pet? (1 is chill/lazy, 5 is hyper)</label>
@@ -64,7 +56,7 @@
                     </p>
                 </form>
             </div>
-            {{!-- gender radio buttons --}}
+            {{!-- Gender radio buttons --}}
             <div class="col s12 m12 l6">
                 <form>
                     <p>Gender of your pet?</p>
@@ -82,7 +74,7 @@
                     </p>
                 </form>
             </div>
-            {{!-- fixed radio buttons --}}
+            {{!-- Fixed radio buttons --}}
             <div class="col s12 m12 l6">
                 <form>
                     <p>Is your pet fixed?</p>
@@ -100,7 +92,7 @@
                     </p>
                 </form>
             </div>
-            <button id="upload_widget" class="cloudinary-button">Upload Picture</button>
+            {{!-- Submit button --}}
             <div class="input-field col s12 m3 l3">
                 <a id="signup-btn" href="#" class="waves-effect waves-light btn btn-large">Signup</a>
             </div>
