@@ -39,6 +39,10 @@ Pet.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    pet_img: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -5,6 +5,28 @@ const petName = document.getElementById("pet_name");
 const petAge = document.getElementById("pet_age");
 const species = document.getElementById("species");
 const activityLevel = document.getElementById("activity_level");
+let petUrl;
+
+var myWidget = cloudinary.createUploadWidget(
+  {
+    cloudName: "dyrbwr67u",
+    uploadPreset: "pet_playdate",
+  },
+  (error, result) => {
+    if (!error && result && result.event === "success") {
+      console.log("Done! Here is the image info: ", result.info);
+      petUrl = result.info.url
+    }
+  }
+);
+
+document.getElementById("upload_widget").addEventListener(
+  "click",
+  function () {
+    myWidget.open();
+  },
+  false
+);
 
 const signup = (event) => {
   event.preventDefault();
@@ -17,6 +39,7 @@ const signup = (event) => {
   const genderVal = document.querySelector('input[name="gender"]:checked').value
   const activityLevelVal = activityLevel.value;
   const fixedVal = document.querySelector('input[name="fixed"]:checked').value;
+  const petImage = petUrl
 
   fetch("/api/users/signup", {
     method: "POST",
@@ -29,6 +52,7 @@ const signup = (event) => {
       gender: genderVal,
       activity_level: activityLevelVal,
       fixed: fixedVal,
+      pet_img: petImage
     }),
     headers: {
       "Content-Type": "application/json",
