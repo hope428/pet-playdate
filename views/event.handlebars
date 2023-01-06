@@ -7,7 +7,25 @@
             <hr>
             <h4>Attending: </h4>
             <ul>{{#each eventData.playdate_pets as |pet|}}
-                <li>{{pet_name}} the {{species}}</li>
+                <div class="attending-container">
+<div class="card attending-card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{pet_img}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{pet_name}}<i class="material-icons right">more_vert</i></span>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{pet_name}}<i class="material-icons right">close</i></span>
+      <ul class="collection">
+        <li>Age: {{pet_age}}</li>
+        <li>Species: {{species}}</li>
+        <li>Gender: {{gender}}</li>
+        <li>Activity level: {{activity_level}}</li>
+        <li>Fixed: {{#if fixed}} yes {{else}} no {{/if}}</li>
+      </ul>
+    </div>
+    </div>
                 {{/each}}
             </ul>
             <div class="input-field col s12 m3 l3">

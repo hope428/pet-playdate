@@ -67,3 +67,18 @@ nav .brand-logo {
       font-size: 1rem;
     }
 }
+
+.attending-card {
+    max-width: 250px;
+}
+
+.attending-card img {
+    max-height: 250px;
+    max-width: 100%;
+}
+
+.attending-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
